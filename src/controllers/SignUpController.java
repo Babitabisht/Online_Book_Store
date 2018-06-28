@@ -86,7 +86,7 @@ public class SignUpController extends HttpServlet {
 
 			 		
 			 		String s="Welcome to Online Book store ,  a  single  place to find all ur favourite books";
-					Mail.Mailer.send("abc@gmail.com","********",email,"Online Book Store",s);
+					Mail.Mailer.send("obs@gmail.com","******",email,"Online Book Store",s);
 					
 			 	response.sendRedirect("index.jsp");
 			//System.out.println("Successfull");

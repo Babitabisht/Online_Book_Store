@@ -5,38 +5,186 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Home</title>
 
 <link rel="stylesheet" href="css/bootstrap.css" media="all" />
 <link rel="stylesheet" href="customstyles/Home.css" media="all" />
 </head>
 <body>
-<%-- <c:if test="${username ==null }">
-response.sendRedirect("index.jsp");
-</c:if> --%>
-
 
 <!-- This is my navigation bar -->
 
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-<div class="container">
-<a href="index.jsp" class="navbar-brand">Online Book Store</a>
-<button class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse" >
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="navbar-collapse">
-<ul class="navbar-nav ml-auto" >
-<li class="nav-item"><a href="" class="nav-link">Home</a></li>
-<li class="nav-item"><a href="" class="nav-link">Explore</a></li>
-<li class="nav-item"><a href="" class="nav-link">Create</a></li>
- </ul>
-</div>
-</div>
-</nav> 
+<%@ include file="header.jsp" %>
 
 <!-- This is welcome section -->
 
 <p class=" jumbotron display-3 bg-secondary text-center ">Welcome to Online Book Store <lead class="text-light text-uppercase"> <c:out  value ="${username}" /></lead></p>
+
+
+
+<!-- 
+
+ -->
+ 
+ <!-- carousel of books -->
+ 
+ <div class=" text-center display-4 m-4">One Place for all your favourites</div>
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="Images/tech.jpeg" alt="First slide">
+       <div class="carousel-caption d-none d-md-block">
+    <h5  class="text-dark">Tech Books</h5>
+    <p class="text-dark">Get all the technical books here</p>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="Images/openBookS.jpg" alt="Second slide">
+         <div class="carousel-caption d-none d-md-block">
+    <h5  class="text-light">Novel</h5>
+    <p class="text-light">Obsessed with reading novels ? No need to be worried , we have latest arrivals</p>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="Images/kindleS.jpg" alt="Third slide">'
+       <div class="carousel-caption d-none d-md-block">
+    <h5  class="text-light">Secondary Education</h5>
+    <p class="text-light">Worrying about board Exams, Do preparations of secondary and senior secondary Examinations, We have the books  from all your favorite Publications</p>
+  </div>
+    </div>
+     <div class="carousel-item">
+      <img class="d-block w-100" src="Images/test.jpeg" alt="Third slide">'
+       <div class="carousel-caption d-none d-md-block">
+    <h5  class="text-light">Competitive Exams</h5>
+    <p class="text-light">Worrying about Entrance and Competitive Exams, Do preparations of Examinations, We have the books  from all your favorite Publications</p>
+  </div>
+    </div>
+    
+  </div>
+   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+ 
+  </div>
+  <!-- About section -->
+ 
+ <div>
+ 
+<div class="bg-primary about" id="about">
+ <h1 class="text-center display-4 text-light">About</h1>
+ 
+ <p class="text-center text-light p-4 mx-auto">We have a wide variety of books , we have secondary classes books ,competitive books,technical books and the latest arrivals of novels. If you are a book lover than you have landed on a right place,here are some major categories of books </p>
+ <div class="row">	
+
+<div class="col-md-3">
+<img src="Images/techyy.jpg" alt="Tech Books" class=" img-fluid rounded-circle" />
+<p class="text-center text-light p-4">Get all the tech Books</p>
+ 
+</div>
+
+<div class="col-md-3">
+<img src="Images/harryPotter.jpeg" alt="Novel" class="img-fluid rounded-circle" />
+<p class="text-center  text-light p-4">Get all the latest Arrivals</p>
+</div>
+
+<div class="col-md-3">
+<img src="Images/secondaryEdu.jpg" alt="Novel" class="img-fluid rounded-circle" />
+<p class="text-center  text-light p-4">Get all the Senior Secondary books from your favourite publisher</p>
+
+</div>
+
+<div class="col-md-3">
+<img src="Images/comp.jpg" alt="Novel" class="img-fluid rounded-circle" />
+<p class="text-center   text-light p-4">Get all the Senior Secondary books from your favourite publisher</p>
+
+</div>
+
+</div>
+ </div>
+ 
+ </div>
+
+
+<!-- Feedback Section -->
+
+<div class="bg-secondary text-center" id="feedback">
+<p class="display-4 text-center p-4 text-light">Feedback</p>
+<p class="text-center p-4 mx-auto text-light">Your Feedback is important for us, Tell us if there is any flaw on this site, all your suggestions are really appreciated. We really appreciate all your efforts</p>
+
+<button class="btn btn-outline-light m-4" data-toggle="modal" data-target="#FeedbackModal">Give Feedback</button>
+
+
+   <!-- Feedbacks-Modal-->
+   <div class="modal fade text-dark" id="FeedbackModal">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="contactModalTitle">
+        Give your valuable Feedback
+      </h5>
+      <button class="close" data-dismiss="modal">&times</button>
+
+    </div>
+    <div class="modal-body">
+    
+    
+      <form action="FeedbackController"  method="post">
+        <div class="form-group">
+          <label for="name">Name </label>
+            <input type="text" class="form-control" name="name" id="" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email"  required>Email</label>
+            <input type="email" class="form-control" name="email" id=""  required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">message</label>
+          <textarea name="message" rows="8" cols="80" class="form-control" required></textarea>
+        </div>
+        
+         <input type="submit" value="submit"  class="btn btn-primary btn-block d-block float-center" />
+        
+      </form>
+      
+      
+    </div>
+    <div class="modal-footer">
+        <!-- 
+      <button class="btn btn-primary btn-block d-block float-center">Submit</button>
+ -->    </div>
+  </div>
+</div>
+
+   </div>
+
+
+</div>
+
+<%@ include file="footer.jsp" %>
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -41,32 +41,58 @@ public class LoginController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String username=  request.getParameter("user");
-		try {
-			System.out.println("Hello");
-	Class.forName("oracle.jdbc.driver.OracleDriver");
-	Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","web","Online_Book_shopping");
-	PreparedStatement pst= conn.prepareStatement("Select * from loginAndSignUp where Username=? and password=?");
-	pst.setString(1, username);
-	pst.setString(2,request.getParameter("pass"));
-	 ResultSet rs=pst.executeQuery();
-	 System.out.println("Executed");
-	 if(rs.next()) {
-		System.out.println(rs.getString(1)+" "+rs.getString(2));
+		System.out.println(username);
+		String pass = request.getParameter("pass");
+		System.out.println(pass);
+		String admin="admin";
 		
-		HttpSession session =request.getSession();
-		session.setAttribute("username", username);
-		response.sendRedirect("Home.jsp");
-	 }else {
-		 response.sendRedirect("index.jsp");
-	 }
-	 
-
-		
-		}catch(Exception e) {
+	
 			
-			System.out.println(e);
-			response.sendRedirect("Error.jsp");
+			try {
+				System.out.println("Hello");
+		Class.forName("oracle.jdbc.driver.OracleDriver");
+		Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","web","Online_Book_shopping");
+		PreparedStatement pst= conn.prepareStatement("Select * from loginAndSignUp where Username=? and password=?");
+		pst.setString(1, username);
+		pst.setString(2, pass);
+		 ResultSet rs=pst.executeQuery();
+		 System.out.println("Executed");
+
+		/* System.out.println(rs.next());
+		 System.out.println(rs.getString(1));  
+		 System.out.println((rs.getString(1)==admin));  
+		// System.out.println(=="admin");
+		 */
+		 
+		 
+		 
+		if(rs.next()) { 
+			System.out.println("in the if section");
+			if(admin.equals(rs.getString(1)) && (admin.equals(rs.getString(7)))) {
+				System.out.println("in the nested if  section");
+				response.sendRedirect("admin.jsp");
+				
+			}else {
+				
+				System.out.println("in the else section");
+				response.sendRedirect("Home.jsp");
+			}
+			
+			
+		}else {
+			System.out.println("in the else section");
+			response.sendRedirect("index.jsp");
 		}
+
+			
+			}catch(Exception e) {
+				
+				System.out.println(e);
+				response.sendRedirect("Error.jsp");
+			}
+		
+		
+
 		
 	}
 

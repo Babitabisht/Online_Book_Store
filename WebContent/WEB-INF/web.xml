@@ -3,28 +3,68 @@
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
-  
   <servlet>
     <servlet-name>SignUpController33</servlet-name>
     <servlet-class>controllers.SignUpController</servlet-class>
   </servlet>
-  
   <servlet-mapping>
     <servlet-name>SignUpController33</servlet-name>
     <url-pattern>/SignUpController</url-pattern>
   </servlet-mapping>
-  
   <servlet>
-  <servlet-name>LoginController33</servlet-name>
-  <servlet-class>controllers.LoginController</servlet-class>
-  
+    <servlet-name>LoginController33</servlet-name>
+    <servlet-class>controllers.LoginController</servlet-class>
   </servlet>
-  
   <servlet-mapping>
-  <servlet-name>LoginController33</servlet-name>
-  <url-pattern>/LoginController</url-pattern>
+    <servlet-name>LoginController33</servlet-name>
+    <url-pattern>/LoginController</url-pattern>
   </servlet-mapping>
-  
-  
-  
+  <servlet>
+    <servlet-name>FeedbackController33</servlet-name>
+    <servlet-class>controllers.FeedbackController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FeedbackController33</servlet-name>
+    <url-pattern>/FeedbackController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>AddBiographyController33</servlet-name>
+    <servlet-class>controllers.AddBiographyController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddBiographyController33</servlet-name>
+    <url-pattern>/AddBiographyController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>AddActionController33</servlet-name>
+    <servlet-class>controllers.AddActionController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddActionController33</servlet-name>
+    <url-pattern>/AddActionController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>AddComputingController33</servlet-name>
+    <servlet-class>controllers.AddComputingController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddComputingController33</servlet-name>
+    <url-pattern>/AddComputingController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>AddLiteratureController33</servlet-name>
+    <servlet-class>controllers.AddLiteratureController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddLiteratureController33</servlet-name>
+    <url-pattern>/AddLiteratureController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>AddReligionController33</servlet-name>
+    <servlet-class>controllers.AddReligionController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddReligionController33</servlet-name>
+    <url-pattern>/AddReligionController</url-pattern>
+  </servlet-mapping>
 </web-app>
