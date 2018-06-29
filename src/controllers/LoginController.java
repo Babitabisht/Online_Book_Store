@@ -67,7 +67,10 @@ public class LoginController extends HttpServlet {
 		 
 		 
 		if(rs.next()) { 
+			
 			System.out.println("in the if section");
+			HttpSession sess =request.getSession();
+			sess.setAttribute("username", username);
 			if(admin.equals(rs.getString(1)) && (admin.equals(rs.getString(7)))) {
 				System.out.println("in the nested if  section");
 				response.sendRedirect("admin.jsp");

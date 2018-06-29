@@ -27,6 +27,15 @@ margin-top: 100px;
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
 
+<% 
+if(session.getAttribute("username")==null){
+	response.sendRedirect("index.jsp");
+}
+response.setHeader("Cache-Control", "no-cache , no-store,must-revalidate");
+response.setHeader("pragma","no-cache");
+response.setHeader("Expires","0");
+
+%>
 
 <!-- This is my navigation bar -->
 
@@ -55,6 +64,7 @@ margin-top: 100px;
 <li class="nav-item"><a href="AddComputing.jsp" class="nav-link">Add Computing, Internet & digital media</a></li>
 <li class="nav-item"><a href="AddLiterature.jsp" class="nav-link">Add Literature and Fiction</a></li>
 <li class="nav-item"><a href="AddReligion.jsp" class="nav-link">Add Religious Book</a></li>
+<li class="nav-item"><a href="logout.jsp" class="nav-link">Logout</a></li>
 
 
  </ul>

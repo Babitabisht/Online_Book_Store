@@ -57,6 +57,7 @@ public class AddReligionController extends HttpServlet {
 			pst.setString(3,request.getParameter("price"));
 			pst.setString(4,request.getParameter("path"));
 			pst.setString(5,request.getParameter("descp"));
+			pst.setString(6,request.getParameter("d_descp"));
 			
 		 int count=	pst.executeUpdate();
 		 

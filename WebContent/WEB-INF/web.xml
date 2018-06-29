@@ -67,4 +67,15 @@
     <servlet-name>AddReligionController33</servlet-name>
     <url-pattern>/AddReligionController</url-pattern>
   </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>orderController33</servlet-name>
+    <servlet-class>controllers.orderController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>orderController33</servlet-name>
+    <url-pattern>/orderController</url-pattern>
+  </servlet-mapping>
+  
+  
 </web-app>

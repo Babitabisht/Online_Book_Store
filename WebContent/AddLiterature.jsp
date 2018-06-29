@@ -19,6 +19,8 @@
 <input type="text" name="price" id="" placeholder="price" class="form-control"  required /><br />
 <input type="text" name="path" id="" placeholder=" Path of the Book's image" class="form-control"  required /><br />
 <input type="text" name="descp" id="" placeholder="description" class="form-control"  required /><br />
+<input type="text" name="d_descp" id="" placeholder="detailed description" class="form-control"  required /><br />
+
 <a href="admin.jsp" class="btn btn-warning">Back</a>
 
 <input type="submit" value="Add Book"  class="btn btn-primary"/>

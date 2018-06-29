@@ -18,6 +18,17 @@
 
 <!-- This is welcome section -->
 
+
+<% 
+if(session.getAttribute("username")==null){
+	response.sendRedirect("index.jsp");
+}
+response.setHeader("Cache-Control", "no-cache , no-store,must-revalidate");
+response.setHeader("pragma","no-cache");
+response.setHeader("Expires","0");
+
+%>
+
 <p class=" jumbotron display-3 bg-secondary text-center ">Welcome to Online Book Store <lead class="text-light text-uppercase"> <c:out  value ="${username}" /></lead></p>
 
 
