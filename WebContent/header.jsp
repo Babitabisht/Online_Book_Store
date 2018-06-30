@@ -23,7 +23,7 @@
 <div class="collapse navbar-collapse" id="navbar-collapse">
 <ul class="navbar-nav ml-auto" >
 
-<li class="nav-item dropdown"><a href="" class="nav-link  dropdown-toggle" data-toggle="dropdown" id="navbar-collapse">Home</a>
+<li class="nav-item dropdown"><a href="Home.jsp" class="nav-link  dropdown-toggle" data-toggle="dropdown" id="navbar-collapse">Home</a>
 <div class="dropdown-menu" aria-labelledby="#a1">
 
 <a href="#about" class="dropdown-item" id="tollfree">About</a>
@@ -45,7 +45,7 @@
     
     
 <li class="nav-item"><a href="yourOrders.jsp" class="nav-link">Your Orders</a></li>
-<li class="nav-item"><a href="" class="nav-link">Cart</a></li>
+<li class="nav-item"><a href="cart.jsp" class="nav-link">Cart</a></li>
 <li class="nav-item"><a href="account.jsp" class="nav-link">Acccount</a></li>
 <li class="nav-item"><a href="logout.jsp" class="nav-link">Logout</a></li>
 

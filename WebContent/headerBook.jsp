@@ -21,7 +21,7 @@
 <div class="collapse navbar-collapse" id="navbar-collapse">
 <ul class="navbar-nav ml-auto" >
 
-<li class="nav-item dropdown"><a href="" class="nav-link  id="navbar-collapse">Home</a>
+<li class="nav-item dropdown"><a href="Home.jsp" class="nav-link  id="navbar-collapse">Home</a>
 
     </li>
     
@@ -31,16 +31,16 @@
 <a href="Biography.jsp" class="dropdown-item" id="tollfree">Biographies, Diaries & True Accounts</a>
 <a href="Action.jsp" class="dropdown-item" id="email">Action & Adventure</a>
 <a href="Computing.jsp" class="dropdown-item" id="email">Computing, Internet & Digital Media</a>
-<a href="Literature" class="dropdown-item" id="email">Literature & Fiction</a>
+<a href="Literature.jsp" class="dropdown-item" id="email">Literature & Fiction</a>
 <a href="Religion.jsp" class="dropdown-item" id="email">Religion</a>
 
 </div>
     </li>
     
     
-<li class="nav-item"><a href="" class="nav-link">Your Orders</a></li>
-<li class="nav-item"><a href="" class="nav-link">Cart</a></li>
-<li class="nav-item"><a href="" class="nav-link">Acccount</a></li>
+<li class="nav-item"><a href="yourOrders.jsp" class="nav-link">Your Orders</a></li>
+<li class="nav-item"><a href="cart.jsp" class="nav-link">Cart</a></li>
+<li class="nav-item"><a href="account.jsp" class="nav-link">Acccount</a></li>
 <li class="nav-item"><a href="logout.jsp" class="nav-link">Logout</a></li>
 
 

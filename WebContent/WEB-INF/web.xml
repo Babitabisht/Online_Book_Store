@@ -67,8 +67,7 @@
     <servlet-name>AddReligionController33</servlet-name>
     <url-pattern>/AddReligionController</url-pattern>
   </servlet-mapping>
-  
-   <servlet>
+  <servlet>
     <servlet-name>orderController33</servlet-name>
     <servlet-class>controllers.orderController</servlet-class>
   </servlet>
@@ -76,6 +75,22 @@
     <servlet-name>orderController33</servlet-name>
     <url-pattern>/orderController</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>cartController33</servlet-name>
+    <servlet-class>controllers.cartController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>cartController33</servlet-name>
+    <url-pattern>/cartController</url-pattern>
+  </servlet-mapping>
   
   
+  <servlet>
+    <servlet-name>removeCartController33</servlet-name>
+    <servlet-class>controllers.removeCartController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>removeCartController33</servlet-name>
+    <url-pattern>/removeCartController</url-pattern>
+  </servlet-mapping>
 </web-app>

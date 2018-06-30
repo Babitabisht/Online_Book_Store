@@ -48,9 +48,12 @@ public class SignUpController extends HttpServlet {
 		System.out.println(" hello dopost....");
 		Connection conn= SqlConnection.getConnection();
 		PreparedStatement pst = null;
+		/*java.util.Date uDate = new java.util.Date(request.getParameter("dob"));
+		java.sql.Date date=new java.sql.Date(uDate.getDate());
+		System.out.println(uDate);*/
 		
 			try {
-				pst = conn.prepareStatement("insert into loginAndSignUp values(?,?,?,?,?,?,?)");
+				pst = conn.prepareStatement("insert into loginAndSignUp values(?,?,?,?,?,?,?,?)");
 			} catch (SQLException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
@@ -61,7 +64,8 @@ public class SignUpController extends HttpServlet {
 		
 		try {String email=request.getParameter("email");
 			
-			java.util.Date uDate = new java.util.Date();
+		//	java.util.Date uDate = new java.util.Date(request.getParameter("dob"));
+			
 					Long mob=Long.parseLong(request.getParameter("contact")) ;
 			pst.setString(1, request.getParameter("username"));
 			
@@ -71,13 +75,14 @@ public class SignUpController extends HttpServlet {
 			
 			pst.setString(4,email);
 			    
-			pst.setDate(5, new Date(uDate.getTime()));
+			pst.setString(5, request.getParameter("dob"));
 			pst.setLong(6, mob);
 			
 			
 			
 			pst.setString(7, request.getParameter("pass"));
 
+			pst.setString(8, request.getParameter("radiogroup"));
 			
 			 int count=pst.executeUpdate();
 			 System.out.println("update.................");
@@ -86,7 +91,7 @@ public class SignUpController extends HttpServlet {
 
 			 		
 			 		String s="Welcome to Online Book store ,  a  single  place to find all ur favourite books";
-					Mail.Mailer.send("","",email,"Online Book Store",s);
+					//Mail.Mailer.send("","",email,"Online Book Store",s);
 					
 			 	response.sendRedirect("index.jsp");
 			//System.out.println("Successfull");

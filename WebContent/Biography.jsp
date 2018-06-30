@@ -37,23 +37,38 @@ response.setHeader("Expires","0");
 select * from Biography
 </sql:query>
 
+
 <div class="bg-secondary">
 
 <c:forEach  var="b"  items="${rs.rows }">
-<div>
+<%-- <c:out value="${b }"></c:out>
+ --%><div>
+ 
+ 
 <div class="row">
 <div class="col-md-3 text-center">
 <img src="<c:out value="${b.image }"></c:out>" alt="Biography" class="img img-fluid imgg" /> <br /><br />
 
-
-<form action="order.jsp">
+<span class="float-left"><form action="order.jsp" method="post">
 <input type="hidden" name="book_image" value="<c:out value="${b.image }"></c:out>" />
 <input type="hidden" name="book_name" value="<c:out value="${b.name}"></c:out>" />
 <input type="hidden" name="book_price" value="<c:out value="${b.price }"></c:out>" />
 
-<input type="submit" value="Buy Now" />
+<input type="submit" class="btn btn-outline-light" value="Buy Now" />
+
+</form></span><span>
+<form action="cartController" method="post">
+
+<input type="hidden" name="book_image" value="<c:out value="${b.image }"></c:out>" />
+
+<input type="hidden" name="book_name" value="<c:out value="${b.name}"></c:out>" />
+<input type="hidden" name="book_price" value="<c:out value="${b.price }"></c:out>" />
+
+<input type="submit" class="btn btn-outline-light" value="Add to cart" />
 
 </form>
+
+</span>
 
  
 </div>

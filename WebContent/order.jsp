@@ -28,7 +28,7 @@ response.addCookie(new Cookie("book_name",b_author)) ;
 <div class="text-center">
 
 <div class="card bg-success">
-<div class="card-header"><p class="display-4 text-center">Add a new  book on Biography, Diary or True Account</p></div>
+<div class="card-header"><p class="display-4 text-center">Please submit the information for successfull delivery</p></div>
 <div class="card-body">
 <form action="orderController" method="post" >
 
@@ -49,7 +49,7 @@ response.addCookie(new Cookie("book_name",b_author)) ;
 
 </select>
 
-<input type="submit" value="Add Book"  class="btn btn-primary"/>
+<input type="submit" value="Add Book"  class="btn btn-outline-light m-4"/>
 
 </div>
 

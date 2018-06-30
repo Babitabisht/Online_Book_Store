@@ -49,9 +49,34 @@ select * from Religion
 <input type="hidden" name="book_name" value="<c:out value="${b.name}"></c:out>" />
 <input type="hidden" name="book_price" value="<c:out value="${b.price }"></c:out>" />
 
-<input type="submit" value="Buy Now" />
+<!-- <input type="submit" class="btn btn-outline-light" value="Buy Now" />
+ -->
+</form>
+
+<span class="float-left">
+<form action="cart.jsp">
+ <input type="hidden" name="book_image" value="<c:out value="${b.image }"></c:out>" />
+ 
+<input type="hidden" name="book_name" value="<c:out value="${b.name}"></c:out>" />
+<input type="hidden" name="book_price" value="<c:out value="${b.price }"></c:out>" />
+
+<input type="submit" class="btn btn-outline-light" value="Buy Now" />
 
 </form>
+</span>
+<span>
+<form action="cartController" method="post">
+
+<input type="hidden" name="book_image" value="<c:out value="${b.image }"></c:out>" />
+
+<input type="hidden" name="book_name" value="<c:out value="${b.name}"></c:out>" />
+<input type="hidden" name="book_price" value="<c:out value="${b.price }"></c:out>" />
+
+<input type="submit" class="btn btn-outline-light" value="Add to cart" />
+
+</form>
+
+</span>
 
 <%--  <button   value="<c:out value="${b.name }" ></c:out>" class="btn btn-outline-light m-4"> Buy Now </button>
  --%></div>
