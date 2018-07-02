@@ -1,0 +1,9 @@
+@charset "ISO-8859-1";
+
+
+
+body{
+background: url(Images/ThankYou.jpg) no-repeat center  center  fixed;
+background-size: cover;
+opacity:0.8;
+}

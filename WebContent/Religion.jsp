@@ -11,7 +11,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Religion</title>
 <link rel="stylesheet" href="css/bootstrap.css" media="all" />
 
 <link rel="stylesheet" href="customstyles/adminImage.css" media="all" />

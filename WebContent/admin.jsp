@@ -15,6 +15,8 @@
 <link rel="stylesheet" href="css/bootstrap.css" media="all" />
 <link rel="stylesheet" href="customstyles/Home.css" media="all" />
 <link rel="stylesheet" href="customstyles/adminImage.css" media="all" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
 
 <style>
 .m{
@@ -50,21 +52,31 @@ response.setHeader("Expires","0");
 </button>
 <div class="collapse navbar-collapse" id="navbar-collapse">
 <ul class="navbar-nav ml-auto" >
+<li class="nav-item"><a href="#AvailableBooks" class="nav-link"> <p class="small text-light">Avalilable Books</p></a></li>
 
-<li class="nav-item dropdown"><a href="AddBiography.jsp" class="nav-link  id="navbar-collapse">Add Biography, Diaries & True accounts</a>
+<li class="nav-item dropdown"><a href="" class="nav-link  dropdown-toggle" data-toggle="dropdown" id="navbar-collapse"><p class="small text-light">Add Books</p></a>
+<div class="dropdown-menu" >
+<a href="AddBiography.jsp" class="dropdown-item" class="nav-link  id="navbar-collapse"><p class="small">Add Biography, Diaries & True accounts</p></a>
 
+  
+    
+    
+<a href="AddAction.jsp" class="dropdown-item" class="nav-link  id="navbar-collapse"><p class="small">Add Action and Adventure</p></a>
+
+
+    
+    
+<a href="AddComputing.jsp" class="dropdown-item" > <p class="small">Add Computing, Internet & digital media</p></a>
+<a href="AddLiterature.jsp"  class="dropdown-item" ><p class="small">Add Literature and Fiction</p></a>
+<a href="AddReligion.jsp" class="dropdown-item"  ><p class="small">Add Religious Book</p></a>
+
+
+</div>
     </li>
-    
-    
-<li class="nav-item dropdown"><a href="AddAction.jsp" class="nav-link  id="navbar-collapse">Add Action and Adventure</a>
 
+<li class="nav-item"><a href="CheckFeedBack.jsp" class="nav-link"> <p class="small text-light">Check FeedBack</p></a></li>
+<li class="nav-item"><a href="logout.jsp" class="nav-link" ><p class="small text-light"><i class="fas fa-sign-out-alt"></i>Logout</p></a>
 </li>
-    
-    
-<li class="nav-item"><a href="AddComputing.jsp" class="nav-link">Add Computing, Internet & digital media</a></li>
-<li class="nav-item"><a href="AddLiterature.jsp" class="nav-link">Add Literature and Fiction</a></li>
-<li class="nav-item"><a href="AddReligion.jsp" class="nav-link">Add Religious Book</a></li>
-<li class="nav-item"><a href="logout.jsp" class="nav-link">Logout</a></li>
 
 
  </ul>
@@ -77,6 +89,9 @@ This is Welcome section -->
 <div class="jumbotron bg-secondary m display-4"><p class="text-center text-light">Welcome  ${username } You are in Admin PAnel </p></div>
 
 
+<div id="AvailableBooks">
+
+<p class="display-4">These are Available Books</p>
 <div class="">
 
 <div class="bg-warning  text-center"><h2>Biographies, Diaries and true account</h2></div>
@@ -85,6 +100,8 @@ This is Welcome section -->
 <sql:query dataSource="${db }"  var="rs" >
 select * from Biography
 </sql:query>
+
+
 
 <!-- 
 Biography -->
@@ -327,8 +344,7 @@ select * from Religion
 </div>
 
 
-
-
+</div>
 
 
 <%@ include file="footer.jsp" %>

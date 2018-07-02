@@ -4,29 +4,43 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Header Books</title>
 <link rel="stylesheet" href="css/bootstrap.css" media="all" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
 <style>
 
 </style>
 </head>
 <body class="bg-secondary">
 
+<%-- 
+<% 
+if(session.getAttribute("username")==null){
+	response.sendRedirect("index.jsp");
+}
+response.setHeader("Cache-Control", "no-cache , no-store,must-revalidate");
+response.setHeader("pragma","no-cache");
+response.setHeader("Expires","0");
+
+%> --%>
+
+
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
 <div class="container">
-<a href="#" class="navbar-brand">Online Book Store</a>
+<a href="#" class="navbar-brand"><i class="fas fa-book"></i> &nbsp;Online Book Store</a>
 <button class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse" >
 <span class="navbar-toggler-icon"></span>
 </button>
 <div class="collapse navbar-collapse" id="navbar-collapse">
 <ul class="navbar-nav ml-auto" >
 
-<li class="nav-item dropdown"><a href="Home.jsp" class="nav-link  id="navbar-collapse">Home</a>
+<li class="nav-item dropdown"><a href="Home.jsp" class="nav-link  id="navbar-collapse"><p class="small"><i class="fas fa-home"></i>Home</p></a>
 
     </li>
     
     
-<li class="nav-item dropdown"><a href="" class="nav-link  dropdown-toggle" data-toggle="dropdown" id="navbar-collapse">Shop by Category</a>
+<li class="nav-item dropdown"><a href="" class="nav-link  dropdown-toggle" data-toggle="dropdown" id="navbar-collapse"><p class="small">Shop by Category</p></a>
 <div class="dropdown-menu" >
 <a href="Biography.jsp" class="dropdown-item" id="tollfree">Biographies, Diaries & True Accounts</a>
 <a href="Action.jsp" class="dropdown-item" id="email">Action & Adventure</a>
@@ -37,11 +51,10 @@
 </div>
     </li>
     
-    
-<li class="nav-item"><a href="yourOrders.jsp" class="nav-link">Your Orders</a></li>
-<li class="nav-item"><a href="cart.jsp" class="nav-link">Cart</a></li>
-<li class="nav-item"><a href="account.jsp" class="nav-link">Acccount</a></li>
-<li class="nav-item"><a href="logout.jsp" class="nav-link">Logout</a></li>
+<li class="nav-item"><a href="yourOrders.jsp" class="nav-link"> <p class="small">Your Order</p></a></li>
+<li class="nav-item"><a href="cart.jsp" class="nav-link"> <p class="small"><i class="fas fa-shopping-cart"></i>Cart</p></a></li>
+<li class="nav-item"><a href="account.jsp" class="nav-link"><p class="small"><i class="far fa-user"></i>Acccount</p></a></li>
+<li class="nav-item"><a href="logout.jsp" class="nav-link"><p class="small"><i class="fas fa-sign-out-alt"></i>Logout</p></a></li>
 
 
  </ul>

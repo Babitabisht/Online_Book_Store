@@ -20,6 +20,9 @@ background-size: cover;
 
 </head>
 <body>
+
+
+
 <div style="background-color:#95afc0;">
 <div class="jumbotron" style="background-color: #95afc0;"> <div class="display-4 text-center "> Your Ultimate Destination to find all your Favourite books</div> </div>
 </div>

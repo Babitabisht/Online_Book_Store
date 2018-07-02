@@ -4,16 +4,26 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Footer</title>
 <link rel="stylesheet" href="css/bootstrap.css" media="all" />
 <link rel="stylesheet" href="customstyles/Home.css" media="all" />
 
 </head>
 <body>
 
+<%-- <% 
+if(session.getAttribute("username")==null){
+	response.sendRedirect("index.jsp");
+}
+response.setHeader("Cache-Control", "no-cache , no-store,must-revalidate");
+response.setHeader("pragma","no-cache");
+response.setHeader("Expires","0");
+
+%> --%>
+
 <div class="bg-dark text-center text-light about p-4">
 <h3 class="p-4">Online Book Store</h3>
-<p class="h5">developed by Babita bisht</p>
+<p>developed by Babita bisht</p>
 <p>copyright &copy; 2018 </p>
 
 </div>

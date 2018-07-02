@@ -4,16 +4,19 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Errore</title>
 <link rel="stylesheet" href="css/bootstrap.css" media="all" />
+<link rel="stylesheet" href="customstyles/error.css" media="all" />
 </head>
 <body class="bg-secondary">
 
+
+
 <div class="container container-fluid container-responsive">
 
-<p class="display-3  text-center">OOps!!!........................Something went wrong</p>
+<p class="display-4  text-center">OOps!!!........       Something went wrong</p>
 
-<p class="display-5 text-center text-warning">Either username or email or contact number is already taken</p>
+<p class="display-4 text-center text-warning">Either username or email or contact number is already taken</p>
 <p class="display-5 text-center text-warning">Please move to the previous page and try onother credentials </p>
 
 </div>

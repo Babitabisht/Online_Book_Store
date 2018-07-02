@@ -4,7 +4,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql"  prefix="sql" %>
   
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1" isELIgnored="false" %>
+    pageEncoding="ISO-8859-1" isELIgnored="false" errorPage="standardError.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -14,6 +14,18 @@
 <link rel="stylesheet" href="customstyles/adminImage.css" media="all" />
 </head>
 <body>
+
+
+<% 
+if(session.getAttribute("username")==null){
+	response.sendRedirect("index.jsp");
+}
+response.setHeader("Cache-Control", "no-cache , no-store,must-revalidate");
+response.setHeader("pragma","no-cache");
+response.setHeader("Expires","0");
+
+%>
+
 <%@ include file="headerBook.jsp" %>
 <%  String u=(String)session.getAttribute("username"); %>
 

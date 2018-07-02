@@ -87,7 +87,7 @@ public class SignUpController extends HttpServlet {
 			 int count=pst.executeUpdate();
 			 System.out.println("update.................");
 			 System.out.println(count);
-			 	if(count!=0) {
+			 	if(count<=0) {
 
 			 		
 			 		String s="Welcome to Online Book store ,  a  single  place to find all ur favourite books";

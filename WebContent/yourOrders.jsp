@@ -16,6 +16,18 @@
 </head>
 <body>
 <%@ include file="headerBook.jsp" %>
+
+
+<% 
+if(session.getAttribute("username")==null){
+	response.sendRedirect("index.jsp");
+}
+response.setHeader("Cache-Control", "no-cache , no-store,must-revalidate");
+response.setHeader("pragma","no-cache");
+response.setHeader("Expires","0");
+
+%>
+
 <div style="margin-top: 100px;" class="text-center bg-primary " > 
 
 <h2>Here are Your Orders</h2>
@@ -33,7 +45,7 @@ select * from orders where username='<%=u %>'
 <div class="row">
 
 <div class="col-md-3 text-center img-fluid imgg ">
-<img src="<c:out value="${b.book_image }"></c:out>" />
+<img class="img-fluid imgg" src="<c:out value="${b.book_image}"></c:out>" />
 </div>
 
 <div class="col-md-2 text-center">

@@ -46,17 +46,20 @@ select * from cart where Username='<%=u %>'
 
 <div class="row">
 <div class="col-md-3 text-center imgg img-fluid">
-	<img src=" <c:out value="${b.image}" ></c:out>" alt="book" /><br />
-	<span class="float-left">
+	<img src=" <c:out value="${b.image}" ></c:out>" alt="book" class="imgg img-fluid" /><br /><br />
 	
-	<form action="order.jsp" method="post">
+	<span class="float-left">
+	<form action="order.jsp" method="post" >
 <input type="hidden" name="book_image" value="<c:out value="${b.image }"></c:out>" />
 <input type="hidden" name="book_name" value="<c:out value="${b.book_name}"></c:out>" />
 <input type="hidden" name="book_price" value="<c:out value="${b.book_price }"></c:out>" />
 
-<input type="submit" class="btn btn-outline-light m-4" value="Buy Now" />
+<input type="submit" class="btn btn-outline-light" value="Buy Now" />
 
-</form></span><span>
+</form>
+</span>
+
+<span>
 <form action="removeCartController" method="post">
 
 <%-- <input type="hidden" name="book_image" value="<c:out value="${b.image }"></c:out>" />
@@ -65,11 +68,12 @@ select * from cart where Username='<%=u %>'
  <input type="hidden" name="book_name" value="<c:out value="${b.book_name}"></c:out>" />
 <%-- <input type="hidden" name="book_price" value="<c:out value="${b.price }"></c:out>" />
  --%>
-<input type="submit" class="btn btn-outline-light m-4" value="Remove" />
+<input type="submit" class="btn btn-outline-light" value="Remove" />
 
 </form>
 
 </span>
+<br /><br />
 </div>
 
 <div class="col-md-3 text-center">
