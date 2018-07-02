@@ -48,7 +48,7 @@ public class AddLiteratureController extends HttpServlet {
 		Connection conn =SqlConnection.getConnection();
 		PreparedStatement pst = null;
 		try {
-			pst = conn.prepareStatement("insert into Literature values(?,?,?,?,?)");
+			pst = conn.prepareStatement("insert into Literature values(?,?,?,?,?,?)");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

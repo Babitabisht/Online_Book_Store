@@ -45,7 +45,7 @@ public class AddActionController extends HttpServlet {
 		Connection conn =SqlConnection.getConnection();
 		PreparedStatement pst = null;
 		try {
-			pst = conn.prepareStatement("insert into Action values(?,?,?,?,?)");
+			pst = conn.prepareStatement("insert into Action values(?,?,?,?,?,?)");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -56,7 +56,7 @@ public class AddActionController extends HttpServlet {
 			pst.setString(3,request.getParameter("price"));
 			pst.setString(4,request.getParameter("path"));
 			pst.setString(5,request.getParameter("descp"));
-			pst.setString(6,request.getParameter("d_descp"));
+			pst.setString(6,request.getParameter("detail_descp"));
 			
 		 int count=	pst.executeUpdate();
 		 

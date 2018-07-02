@@ -24,9 +24,9 @@ response.setHeader("Expires","0");
 <div class="bg-secondary text-center">
 
 <p class="text-light">
->OOps!!!.....Something went wrong Either this book has been Added by the admin or something else has happened please move to the feedback form and try again
+OOps!!!.....Something went wrong Either this book has been Added by the admin or something else has happened please move to the feedback form and try again
 </p>
-<a href="admin.jsp" class="btn btn-primary">Click here</a>
+<a href="AddBiography.jsp" class="btn btn-primary">Click here</a>
 
 </div>
 <%@ include file="footer.jsp" %>

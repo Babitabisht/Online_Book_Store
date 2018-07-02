@@ -43,7 +43,7 @@ public class AddBiographyController extends HttpServlet {
 		Connection conn =SqlConnection.getConnection();
 		PreparedStatement pst = null;
 		try {
-			pst = conn.prepareStatement("insert into Biography values(?,?,?,?,?)");
+			pst = conn.prepareStatement("insert into Biography values(?,?,?,?,?,?)");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

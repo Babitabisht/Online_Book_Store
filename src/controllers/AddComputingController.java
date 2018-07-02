@@ -47,7 +47,7 @@ public class AddComputingController extends HttpServlet {
 		Connection conn =SqlConnection.getConnection();
 		PreparedStatement pst = null;
 		try {
-			pst = conn.prepareStatement("insert into Computing values(?,?,?,?,?)");
+			pst = conn.prepareStatement("insert into Computing values(?,?,?,?,?,?)");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

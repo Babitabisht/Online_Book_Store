@@ -83,8 +83,6 @@
     <servlet-name>cartController33</servlet-name>
     <url-pattern>/cartController</url-pattern>
   </servlet-mapping>
-  
-  
   <servlet>
     <servlet-name>removeCartController33</servlet-name>
     <servlet-class>controllers.removeCartController</servlet-class>
@@ -93,4 +91,14 @@
     <servlet-name>removeCartController33</servlet-name>
     <url-pattern>/removeCartController</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>RemoveController33</servlet-name>
+    <servlet-class>controllers.RemoveController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RemoveController33</servlet-name>
+    <url-pattern>/RemoveController</url-pattern>
+  </servlet-mapping>
+  
 </web-app>

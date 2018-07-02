@@ -122,7 +122,18 @@ Biography -->
 <c:forEach  var="table"  items="${rs.rows}"  >
 <tbody>
 <tr>
-<td><img class="img-fluid imgg" src="<c:out value="${table.image }"></c:out>" alt="kalam" /></td>
+<td><img class="img-fluid imgg" src="<c:out value="${table.image }"></c:out>" alt="kalam" />
+<form action="RemoveController" method="post">
+
+
+<input type="hidden" name="Book" value="Biography" />
+<input type="hidden" name="book_name" value="<c:out value="${table.name}"></c:out>" />
+
+<input type="submit" class="btn btn-outline-dark m-4" value="Remove This Book" />
+
+</form>
+
+</td>
 <td><c:out value="${table.name }"></c:out></td>
 <td><c:out value="${table.author }"></c:out></td>
 
@@ -173,7 +184,17 @@ select * from Action
 </thead>
 <c:forEach  var="table"  items="${rs.rows}"  >
 <tr>
-<td><img class="img-fluid imgg" src="<c:out value="${table.image }"></c:out>" alt="kalam" /></td>
+<td><img class="img-fluid imgg" src="<c:out value="${table.image }"></c:out>" alt="kalam" />
+<form action="RemoveController" method="post">
+
+<input type="hidden" name="Book" value="Action" />
+
+<input type="hidden" name="book_name" value="<c:out value="${table.name}"></c:out>" />
+
+<input type="submit" class="btn btn-outline-dark m-4" value="Remove This Book" />
+
+</form>
+</td>
 <td><c:out value="${table.name }"></c:out></td>
 <td><c:out value="${table.author }"></c:out></td>
 <td><c:out value="${table.price }"></c:out></td>
@@ -225,7 +246,17 @@ select * from Computing
 </thead>
 <c:forEach  var="table"  items="${rs.rows}"  >
 <tr>
-<td><img class="img-fluid imgg" src="<c:out value="${table.image }"></c:out>" alt="kalam" /></td>
+<td><img class="img-fluid imgg" src="<c:out value="${table.image }"></c:out>" alt="kalam" />
+<form action="RemoveController" method="post">
+
+
+<input type="hidden" name="Book" value="Computing" />
+<input type="hidden" name="book_name" value="<c:out value="${table.name}"></c:out>" />
+
+<input type="submit" class="btn btn-outline-dark m-4" value="Remove This Book" />
+
+</form>
+</td>
 <td><c:out value="${table.name }"></c:out></td>
 <td><c:out value="${table.author }"></c:out></td>
 <td><c:out value="${table.price }"></c:out></td>
@@ -276,7 +307,17 @@ select * from Literature
 </thead>
 <c:forEach  var="table"  items="${rs.rows}"  >
 <tr>
-<td><img  class="img-fluid imgg" src="<c:out value="${table.image }"></c:out>" alt="kalam" /></td>
+<td><img  class="img-fluid imgg" src="<c:out value="${table.image }"></c:out>" alt="kalam" />
+<form action="RemoveController" method="post">
+
+<input type="hidden" name="Book" value="Literature" />
+
+<input type="hidden" name="book_name" value="<c:out value="${table.name}"></c:out>" />
+
+<input type="submit" class="btn btn-outline-dark m-4" value="Remove This Book" />
+
+</form>
+</td>
 <td><c:out value="${table.name }"></c:out></td>
 <td><c:out value="${table.author }"></c:out></td>
 <td><c:out value="${table.price }"></c:out></td>
@@ -325,7 +366,17 @@ select * from Religion
 
 <c:forEach  var="table"  items="${rs.rows}"  >
 <tr>
-<td><img class="img-fluid imgg" src="<c:out value="${table.image }"></c:out>" alt="kalam" /></td>
+<td><img class="img-fluid imgg" src="<c:out value="${table.image }"></c:out>" alt="kalam" />
+<form action="RemoveController" method="post">
+
+<input type="hidden" name="Book" value="Religion" />
+
+<input type="hidden" name="book_name" value="<c:out value="${table.name}"></c:out>" />
+
+<input type="submit" class="btn btn-outline-dark m-4" value="Remove This Book" />
+
+</form>
+</td>
 <td><c:out value="${table.name }"></c:out></td>
 <td><c:out value="${table.author }"></c:out></td>
 <td><c:out value="${table.price }"></c:out></td>
